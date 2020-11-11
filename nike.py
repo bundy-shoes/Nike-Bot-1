@@ -8,7 +8,7 @@ import config as Config
 import time
 
 path = r'geckodriver.exe'
-max_timeout = Config.MAX_TIMEOUT
+# max_timeout = Config.MAX_TIMEOUT
 main_driver = webdriver.Firefox(executable_path=path)
 
 
@@ -31,7 +31,11 @@ def check_location():
 
 def check_size(shoe_size):
     MF_size_dict = {
+    '9':'//button[@class="size-grid-dropdown size-grid-button"][.="M 9 / W 10.5"]', 
+    '9.5': '//button[@class="size-grid-dropdown size-grid-button"][.="M 9.5 / W 11"]',
     '10': '//button[@class="size-grid-dropdown size-grid-button"][.="M 10 / W 11.5"]',
+    '10.5': '//button[@class="size-grid-dropdown size-grid-button"][.="M 10.5 / W 12"]',
+    '11.5': '//button[@class="size-grid-dropdown size-grid-button"][.="M 11.5 / W 13]',
     '12': '//button[@class="size-grid-dropdown size-grid-button"][.="M 12 / W 13.5"]',
     '12.5': '//button[@class="size-grid-dropdown size-grid-button"][.="M 12.5 / W 14"]'
     }
